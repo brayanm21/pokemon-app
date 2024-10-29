@@ -1,0 +1,24 @@
+{
+  "name": "scaffoldLit",
+  "version": "0.1.0",
+  "keywords": [
+    "cells-app"
+  ],
+  "dependencies": {
+    "@bbva-web-components/bbva-core-intl-mixin": "^1.0.5",
+    "@bbva-web-components/bbva-core-scoping-ambients-shim": "^1.0.1",
+    "@bbva-web-components/bbva-form-field": "^4.13.0",
+    "@bbva-web-components/bbva-foundations-theme": "^2.2.4",
+    "@bbva-web-components/bbva-header-main": "^4.0.0",
+    "@cells-components/cells-template-paper-drawer-panel": "^2.0.7",
+    "@cells-components/coronita-icons": "^1.0.62",
+    "@cells/cells-bridge": "^3.13.3",
+    "@cells/cells-element": "^1.2.0",
+    "@cells/cells-page": "^1.2.0",
+    "@open-wc/lit-helpers": "^0.3.11",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "cells-app-template": "^5.0.2",
+    "@meraki/pokemon-ui": "https://github.com/brayanm21/pokemon-ui.git#master",
+    "@meraki/evolution-ui": "https://github.com/brayanm21/evolution-ui.git#master"
+  }
+}
