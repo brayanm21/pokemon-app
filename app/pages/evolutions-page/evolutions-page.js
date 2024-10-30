@@ -14,13 +14,22 @@ class EvolutionsPage extends BbvaCoreIntlMixin(CellsPage) {
 
   static get properties() {
     return {
-      idNumber: { type: String }
+      idNumber: { type: Number }
     };
   }
 
   constructor() {
     super();
-    this.idNumber = '2';
+    
+  }
+
+  connectedCallback() {
+    super.connectedCallback && super.connectedCallback();
+    this.subscribe('numeroId', (idNumber) => this.idNumber = idNumber);
+  }
+
+  onPageLeave() {
+    this.idNumber = '';
   }
 
   render() {
@@ -34,7 +43,6 @@ class EvolutionsPage extends BbvaCoreIntlMixin(CellsPage) {
             @header-main-icon-left-primary-click=${() => window.history.back()}>
           </bbva-header-main>
         </div>
-
         <div slot="app__main" class="container">
         <evolution-ui
           id =${this.idNumber}

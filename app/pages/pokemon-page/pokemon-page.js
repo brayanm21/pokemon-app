@@ -23,11 +23,6 @@ class PokemonPage extends BbvaCoreIntlMixin(CellsPage) {
     this.title = 'holamundo';
   }
 
-  handleMovementClick({ id, label }) {
-    this.publish('movement_title', label);
-    this.navigate('movement-detail', { id, label: normalizeUriString(label), });
-  }
-
   render() {
     return html`
       <cells-template-paper-drawer-panel mode="seamed">
@@ -42,9 +37,17 @@ class PokemonPage extends BbvaCoreIntlMixin(CellsPage) {
               text="Details" 
               @click="${() => this.navigate('evolutions')}">
             </bbva-button-default>
-          <pokemon-ui></pokemon-ui>
+          <pokemon-ui
+          @numero-click ="${this._onEvolutions}";
+          ></pokemon-ui>
         </div>
      </cells-template-paper-drawer-panel>`;
+  }
+
+  _onEvolutions(ev) {
+    const numero  = ev.detail;
+    this.publish('numeroId', numero);
+    this.navigate('evolutions');
   }
 
   static get styles() {
