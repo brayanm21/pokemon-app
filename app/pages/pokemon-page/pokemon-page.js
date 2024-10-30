@@ -14,13 +14,11 @@ class PokemonPage extends BbvaCoreIntlMixin(CellsPage) {
 
   static get properties() {
     return {
-      title: { type: String }
     };
   }
 
   constructor() {
     super();
-    this.title = 'holamundo';
   }
 
   render() {
@@ -33,10 +31,6 @@ class PokemonPage extends BbvaCoreIntlMixin(CellsPage) {
         </div>
 
         <div slot="app__main" class="container">
-        <bbva-button-default 
-              text="Details" 
-              @click="${() => this.navigate('evolutions')}">
-            </bbva-button-default>
           <pokemon-ui
           @numero-click ="${this._onEvolutions}";
           ></pokemon-ui>
